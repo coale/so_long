@@ -6,7 +6,7 @@
 /*   By: aconta <aconta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 12:04:39 by aconta            #+#    #+#             */
-/*   Updated: 2023/04/05 12:03:51 by aconta           ###   ########.fr       */
+/*   Updated: 2023/04/26 12:15:10 by aconta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,8 @@ int	all_the_checks(char *path)
 			return (1);
 		if (ft_check_rectangular(map) || check_walls(map)
 			|| count_char(map, 'P') != 1 || count_char(map, 'E') != 1
-			|| count_char(map, 'C') < 1 || ft_path_check(map))
+			|| count_char(map, 'C') < 1 || ft_path_check(map)
+			|| foreign_char(map) != 1)
 		{
 			ft_free_map(map);
 			return (1);

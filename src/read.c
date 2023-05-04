@@ -16,7 +16,7 @@ char	*long_map(char *temp, char *long_line)
 {
 	char	*dest;
 
-	dest = ft_strjoin(temp, long_line);
+	dest = ft_strjoin(long_line, temp);
 	free(temp);
 	free(long_line);
 	return (dest);

@@ -6,7 +6,7 @@
 /*   By: aconta <aconta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 15:10:10 by aconta            #+#    #+#             */
-/*   Updated: 2023/04/05 14:32:02 by aconta           ###   ########.fr       */
+/*   Updated: 2023/04/26 12:18:26 by aconta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,27 @@ int	count_char(char **map, char c)
 		i++;
 	}
 	return (counter);
+}
+
+int	foreign_char(char **map)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (map[i])
+	{
+		j = 0;
+		while (map[i][j])
+		{
+			if (map[i][j] != '1' || map[i][j] != '0' || map[i][j] != 'E' \
+			|| map[i][j] != 'P' || map[i][j] != 'C')
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
 }
 
 void	ft_free_map(char **map)

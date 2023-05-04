@@ -6,7 +6,7 @@
 /*   By: aconta <aconta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 15:10:21 by aconta            #+#    #+#             */
-/*   Updated: 2023/04/05 11:38:58 by aconta           ###   ########.fr       */
+/*   Updated: 2023/04/26 12:10:58 by aconta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,6 @@ t_point	pos_char(char **map, char c);
 int		count_char(char **map, char c);
 int		all_the_checks(char *path);
 int		check_ber(char *path);
+int		foreign_char(char **map);
 
 #endif
